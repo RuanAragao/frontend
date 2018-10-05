@@ -144,6 +144,16 @@ header {
 #endpoint {
   margin-top: 30px;
 }
+.copy-success {
+  border-radius: 16px;
+  border: 0px solid #28a745;
+  background-color: #28a745;
+}
+.copy-success-label {
+  margin-top: -27px;
+  display: block;
+  padding-top: 5px;
+}
 span.endpoint {
   display: inline-block;
   height: 40px;
