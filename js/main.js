@@ -1,10 +1,13 @@
-// Function for copy success alert
+// Function for copy success tooltip
 function copyAlert() {
-  $( ".copy-success" ).animate({ borderWidth: "4px" }, 500 );
-  $( ".copy-success-label" ).animate({ marginTop: "0px" }, 500, function() {
-    $( this ).animate({marginTop: "0px"}, 2000, function(e) {
-      $( ".copy-success-label" ).animate({ marginTop: "-27px" }, 500 );
-      $( ".copy-success" ).animate({ borderWidth: "0px" }, 500 );
+  const duration_animation = 250;
+  const duration_visible = 2000;
+
+  $( ".tooltiptext" ).css({visibility:"visible", opacity: 0.0}).animate({opacity: 1.0}, duration_animation, function() {
+    $( this ).animate({marginTop: "0px"}, duration_visible, function(e) {
+      $('.tooltiptext').animate({opacity: 0.0}, duration_animation, function(){
+        $( this ).css("visibility","hidden");
+      });
     });
   });
 }
